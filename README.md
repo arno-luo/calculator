@@ -2,21 +2,21 @@
 
 ## grammar:
 
-expression
+### expression
 -    term
 -    term "+" expression 
 -    term "-" expression 
-term
+### term
 -    element
 -    element "*" term 
 -    element "/" term 
 -    element "%" term 
-element
+### element
 -    number
 -    "("expression")"
-number
+### number
 -    digital 
 -    digital"."digital
-digital
+### digital
 -    [0-9]
 -    [0-9]digital   
