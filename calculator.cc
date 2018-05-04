@@ -1,4 +1,4 @@
-// A simple calculation impletemented by C++
+// A simple calculation implemented by C++
 // arno-luo
 //
 
@@ -146,7 +146,7 @@ int main()
 {
     while(true)
     {
-        cout << "Please enter the expression:" << endl;
+        cout << "Please enter the expression, end by ';'" << endl;
 	try
 	{
             while(cin)
