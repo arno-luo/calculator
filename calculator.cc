@@ -77,7 +77,7 @@ void Token_stream::putback(Token t)
 Token_stream ts;
 double expression();
 
-double element()
+double factor()
 {
     Token t = ts.get();
     switch(t.kind)
@@ -90,23 +90,24 @@ double element()
     case '8':
 	    return t.value;
     default:
-	    error("element expected");
+	    error("factor expected");
+	    return -1;  // Never return
     }
 }
 
 double term()
 {
-    double left = element();
+    double left = factor();
     Token t = ts.get();
     while(true)
     {
         switch(t.kind)
 	{
 	case '*':
-		left *= element();
+		left *= factor();
 		break;
 	case '/':{
-		double e = element();
+		double e = factor();
 		if(0 == e) error("divide by zero");
 		left /= e;
 		break;}
