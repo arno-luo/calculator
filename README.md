@@ -1,6 +1,6 @@
 # calculator
 
-## gramar:
+## grammar:
 
 #### *expression*
         term ('+' | '-' term)*               
